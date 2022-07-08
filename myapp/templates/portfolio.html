@@ -1,0 +1,98 @@
+{% extends 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<head>
+
+
+  <!-- portfolio section -->
+
+  <section class="portfolio_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our portfolio
+        </h2>
+        <p>
+          I will come, what can our school district do?
+        </p>
+      </div>
+     <div class="portfolio_container layout_padding2">
+        <div class="box-1">
+          <div class="img-box b-1">
+            <img src="{% static 'images/p-1.jpg' %}" alt="">
+            <div class="btn-box">
+              <a href="{% url 'rhinofact' %}" class="btn-1">
+
+
+              </a>
+            </div>
+          </div>
+          <div class="img-box b-2">
+            <img src="{% static 'images/p-6 (2).jpg' %}" alt="">
+            <div class="btn-box">
+              <a href="{% url 'tiger' %}" class="btn-1">
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="box-2">
+          <div class="box-2-top">
+            <div class="img-box b-3">
+              <img src="{% static 'images/p-3.jpg' %}" alt="">
+              <div class="btn-box">
+                <a href="{% url 'butterfly' %}" class="btn-1">
+
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="box-2-top2">
+            <div class="img-box b-4">
+              <img src="{% static 'images/p-4.jpg' %}" alt="">
+              <div class="btn-box">
+                <a href="{% url 'butterfly' %}" class="btn-1">
+
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="box-2-btm">
+            <div class="img-box b-5">
+              <img src="{% static 'images/p-5(5).jpg' %}" alt="">
+              <div class="btn-box">
+                <a href="{% url 'vultures' %}" class="btn-1">
+
+                </a>
+              </div>
+            </div>
+            <div class="img-box b-6">
+              <img src="{% static 'images/p-6(6).jpg' %}" alt="">
+              <div class="btn-box">
+                <a href="{% url 'lion' %}" class="btn-1">
+
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="see_btn">
+        <a href="">
+          See More
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end about section -->
+
+  
+
+</body>
+
+</html
+{% endblock %}

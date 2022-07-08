@@ -1,0 +1,71 @@
+{% extends 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<head>
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="bg-img1">
+      <img src="{% static 'images/bg-img-1.png' %}" alt="">
+    </div>
+    <div class="bg-img2">
+      <img src="{% static 'images/bg-img-2.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Login
+        </h2>
+      </div>
+    </div>
+
+          <div class="col-md-8 mx-auto">
+           <form class="form" method="POST" action="{% url 'login' %}" enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                {% if s_msg %}
+                                                <div class="alert alert-primary" role="alert">
+                                                    {{s_msg}}
+                                                </div>
+                                                {% endif %}
+                                                {% if e_msg %}
+                                                <div class="alert alert-secondary" role="alert">
+                                                  {{e_msg}}
+                                                </div>
+                                                {% endif %}
+        
+                <!-- </div>  -->
+                <div class="content">                                                
+                   
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="email" placeholder="Enter Email" required>
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                        </span>
+                    </div>
+                                          
+                </div>
+                <!-- <div class="checkbox">
+                        <input id="terms" type="checkbox">
+                        <label for="terms">
+                                I read and agree to the <a href="javascript:void(0);">terms of usage</a>
+                        </label>
+                    </div> -->
+                <div class="footer text-center">
+                    <input type="submit" class="btn btn-primary btn-round btn-lg btn-block waves-effect waves-light" value="REGISTRATION" style="background-color:#0fcfdc; color: #000;" />
+
+
+                    <!-- <a href="..\dashboard\index.html" class="btn btn-primary btn-round btn-lg btn-block waves-effect waves-light">SIGN UP</a>
+                    <h5><a class="link" href="login.html">You already have a membership?</a></h5>
+                    --></div> 
+            </form>
+        </div>
+  </section>
+</head>
+{% endblock %}
